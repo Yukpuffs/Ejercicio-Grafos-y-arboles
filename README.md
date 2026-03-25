@@ -29,4 +29,5 @@ def ruta_minima(grafo, origen, destino):
 print(ruta_minima(metro, "Portal Norte", "Centro"))
 # Esperado: ['Portal Norte', 'Toberín', 'Calle 142',
 #            'Calle 127', 'Alcalá', 'Calle 100', 'Virrey', 'Centro']#
-![Grafo](C:\Users\Karol\Downloads\6 semestre\diseño de algoritmos\Arboles_grafos\graph.png)
+
+![Grafo](graph.png)
