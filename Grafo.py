@@ -1,10 +1,5 @@
-#Imagina que eres el desarrollador de la app del Metro de Bogotá. Tienes un grafo no dirigido donde cada estación es un nodo y cada vía entre estaciones es una arista.
-'''
-Tu tarea: Implementa una función ruta_minima(grafo, origen, destino) usando BFS que retorne la lista de estaciones del recorrido más corto (menor número de paradas) entre dos estaciones. Si no existe camino, retorna None.
+from collections import deque # Library for queque 
 
-Grafo de prueba:
-
-Python — metro.py (plantilla)
 metro = {
     "Portal Norte":   ["Toberín"],
     "Toberín":        ["Portal Norte", "Calle 142"],
@@ -19,14 +14,25 @@ metro = {
     "Portal Sur":     ["Centro"],
 }
 
-# TU SOLUCIÓN AQUÍ:
 def ruta_minima(grafo, origen, destino):
-    # Pista: usa BFS con seguimiento del camino
-    pass
+    visitados = set()
+    cola = deque([[origen]])
+    visitados.add(origen)
 
-# Prueba:
-print(ruta_minima(metro, "Portal Norte", "Centro"))
-# Esperado: ['Portal Norte', 'Toberín', 'Calle 142',
-#            'Calle 127', 'Alcalá', 'Calle 100', 'Virrey', 'Centro']#
-'''
+    while cola:
+        camino = cola.popleft()
+        nodo = camino[-1]
 
+        for vecino in grafo[nodo]:
+            if vecino not in visitados:
+                nuevo_camino = camino + [vecino]
+
+                if vecino == destino:
+                    return nuevo_camino
+
+                visitados.add(vecino)
+                cola.append(nuevo_camino)
+
+    return None
+
+print("La mejor ruta es: ", ruta_minima(metro, "Portal Norte", "Centro"))
