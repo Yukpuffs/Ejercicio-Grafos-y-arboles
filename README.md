@@ -27,8 +27,8 @@ def ruta_minima(grafo, origen, destino):
 
 # Prueba:
 print(ruta_minima(metro, "Portal Norte", "Centro"))
-# Esperado: ['Portal Norte', 'Toberín', 'Calle 142',
-#            'Calle 127', 'Alcalá', 'Calle 100', 'Virrey', 'Centro']#
+Esperado: ['Portal Norte', 'Toberín', 'Calle 142',
+'Calle 127', 'Alcalá', 'Calle 100', 'Virrey', 'Centro']
 
 ![Grafo](graph.png)
 
@@ -39,9 +39,9 @@ Eres el sistema de ranking de un torneo de e-sports. Los jugadores tienen puntua
 
 Tu tarea: Partiendo del BST implementado en la sección de código, agrega tres métodos:
 
-# a minimo() — Retorna el jugador con menor puntuación.
-# b maximo() — Retorna el jugador con mayor puntuación.
-# c top_n(n) — Retorna los N jugadores con mayor puntuación.
+a minimo() — Retorna el jugador con menor puntuación.
+b maximo() — Retorna el jugador con mayor puntuación.
+c top_n(n) — Retorna los N jugadores con mayor puntuación.
 
 Python — torneo.py (plantilla)
 # Usa la clase BST del ejemplo anterior y agrégale:
