@@ -15,8 +15,8 @@ metro = {
 }
 
 def ruta_minima(grafo, origen, destino):
-    visitados = set()
-    cola = deque([[origen]])
+    visitados = set() # Nodes already explored
+    cola = deque([[origen]]) #Append stations in a list
     visitados.add(origen)
 
     while cola:
