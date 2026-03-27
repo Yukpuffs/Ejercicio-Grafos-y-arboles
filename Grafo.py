@@ -14,25 +14,28 @@ metro = {
     "Portal Sur":     ["Centro"],
 }
 
-def ruta_minima(grafo, origen, destino):
-    visitados = set() # Nodes already explored
-    cola = deque([[origen]]) #Append stations in a list
-    visitados.add(origen)
+class ruta:
 
-    while cola:
-        camino = cola.popleft()
-        nodo = camino[-1]
+    def ruta_minima(grafo, origen, destino):
+        
+        visitados = set() # Nodes already explored
+        cola = deque([[origen]]) #Append stations in a list
+        visitados.add(origen)
 
-        for vecino in grafo[nodo]:
-            if vecino not in visitados:
-                nuevo_camino = camino + [vecino]
+        while cola:
+            camino = cola.popleft()
+            nodo = camino[-1]
 
-                if vecino == destino:
-                    return nuevo_camino
+            for vecino in grafo.get(nodo, []):
+                if vecino not in visitados:
+                    nuevo_camino = camino + [vecino]
 
-                visitados.add(vecino)
-                cola.append(nuevo_camino)
+                    if vecino == destino:
+                        return nuevo_camino
 
-    return None
+                    visitados.add(vecino)
+                    cola.append(nuevo_camino)
 
-print("La mejor ruta es: ", ruta_minima(metro, "Portal Norte", "Centro"))
+        return None
+
+print("La mejor ruta es: ", ruta.ruta_minima(metro, "Portal Norte", "Centro"))
