@@ -20,12 +20,14 @@ metro = {
     "Portal Sur":     ["Centro"],
 }
 
-# TU SOLUCIÓN AQUÍ:
+# TU SOLUCIÓN AQUÍ
+
 def ruta_minima(grafo, origen, destino):
     # Pista: usa BFS con seguimiento del camino
     pass
 
-# Prueba:
+# Prueba
+
 print(ruta_minima(metro, "Portal Norte", "Centro"))
 Esperado: ['Portal Norte', 'Toberín', 'Calle 142',
 'Calle 127', 'Alcalá', 'Calle 100', 'Virrey', 'Centro']
@@ -44,7 +46,8 @@ b maximo() — Retorna el jugador con mayor puntuación.
 c top_n(n) — Retorna los N jugadores con mayor puntuación.
 
 Python — torneo.py (plantilla)
-# Usa la clase BST del ejemplo anterior y agrégale:
+
+# Usa la clase BST del ejemplo anterior y agrégale
 
 class BST:
     # ... (código anterior) ...
@@ -61,8 +64,8 @@ class BST:
         # Pista: InOrder da orden ascendente. ¿Cuál da descendente?
         pass
 
+# Prueba 2
 
-# Prueba:
 torneo = BST()
 puntos = [3200, 4100, 1800, 5000, 2700, 3900, 4600]
 for p in puntos:
