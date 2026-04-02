@@ -15,9 +15,11 @@ metro = {
 }
 
 class ruta:
+    def __init__(self, grafo):
+        self.grafo = grafo
 
-    def ruta_minima(grafo, origen, destino):
-        
+    def ruta_minima(self, origen, destino):
+
         visitados = set() # Nodes already explored
         cola = deque([[origen]]) #Append stations in a list
         visitados.add(origen)
@@ -26,7 +28,7 @@ class ruta:
             camino = cola.popleft()
             nodo = camino[-1]
 
-            for vecino in grafo.get(nodo, []):
+            for vecino in self.grafo.get(nodo, []):
                 if vecino not in visitados:
                     nuevo_camino = camino + [vecino]
 
@@ -38,4 +40,5 @@ class ruta:
 
         return None
 
-print("La mejor ruta es: ", ruta.ruta_minima(metro, "Portal Norte", "Centro"))
+rut = ruta(metro)
+print("La mejor ruta es: ", rut.ruta_minima("Portal Norte", "Centro"))
