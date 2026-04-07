@@ -2,15 +2,15 @@ from collections import deque # Library for queque
 
 metro = {
     "Portal Norte":   ["Toberín"],
-    "Toberín":        ["Portal Norte", "Calle 142"],
-    "Calle 142":      ["Toberín", "Calle 127"],
-    "Calle 127":      ["Calle 142", "Pepe Sierra", "Alcalá"],
-    "Pepe Sierra":    ["Calle 127", "Niza"],
-    "Alcalá":         ["Calle 127", "Calle 100"],
-    "Niza":           ["Pepe Sierra", "Calle 100"],
-    "Calle 100":      ["Alcalá", "Niza", "Virrey"],
-    "Virrey":         ["Calle 100", "Centro"],
-    "Centro":         ["Virrey", "Portal Sur"],
+    "Toberín":        ["Calle 142"],
+    "Calle 142":      ["Calle 127"],
+    "Calle 127":      ["Pepe Sierra", "Alcalá"],
+    "Pepe Sierra":    ["Niza"],
+    "Alcalá":         ["Calle 100"],
+    "Niza":           ["Calle 100"],
+    "Calle 100":      ["Virrey"],
+    "Virrey":         ["Centro"],
+    "Centro":         ["Portal Sur"],
     "Portal Sur":     ["Centro"],
 }
 
